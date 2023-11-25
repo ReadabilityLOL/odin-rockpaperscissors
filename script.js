@@ -12,9 +12,9 @@ function getPlayerChoice(){
 	return playerChoice;
 }
 
+let wincounter = 0;
+let compWinCounter = 0;
 function decide(input1,input2){
-	let wincounter = 0;
-	let compWinCounter = 0;
 	if(input1 == "rock"&&input2 == "paper"){
 		console.log("computer wins");
 		compWinCounter++;
@@ -37,6 +37,12 @@ function decide(input1,input2){
 		compWinCounter++;
 	}
 }
-for(let x = 0; x<5;x++){
+while(compWinCounter<3&&wincounter<3){
 	decide(getPlayerChoice(),getComputerChoice());
+}
+
+if(wincounter>compWinCounter){
+	console.log("you win!");
+}else{
+	console.log("you lose :(");
 }
