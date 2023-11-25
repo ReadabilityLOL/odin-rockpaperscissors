@@ -1,7 +1,7 @@
 let choices = ["rock","paper","scissors"]
 function getComputerChoice(){
 	let choiceIndex = Math.floor(Math.random() * (3) );
-	console.log(choices[choiceIndex]);
+ 	return (choices[choiceIndex]);
 }
 
 function getPlayerChoice(){
@@ -9,7 +9,24 @@ function getPlayerChoice(){
 	while(!choices.includes(playerChoice)){
 		playerChoice = prompt("Sorry, that doesn't work. Please enter your choice").toLowerCase();
 	}
-	console.log(playerChoice);
+	return playerChoice;
 }
 
-getPlayerChoice();
+function decide(input1,input2){
+	let wincounter = 0;
+	let compWinCounter = 0;
+	if(input1 == "rock"&&input2 == "paper"){
+		console.log("computer wins");
+	}else if(input1=="rock"&&input2=="scissors"){
+		console.log("player wins");
+	}else if(input1==input2){
+		console.log("tie!");
+	}else if(input1=="scissors"&&input2=="rock"){
+		console.log("computer wins!")
+	}else if(input1=="scissors"&&input2=="paper"){
+		console.log("player wins!")
+	}else if(input1=="paper"&&input2=="rock"){
+		console.log("player wins!")
+	}else if(input1=="paper"&&input2=="scissors"){
+		console.log("computer wins!")
+}
