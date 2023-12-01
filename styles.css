@@ -1,0 +1,33 @@
+body{
+	background-color:#1e1e2e;
+	color:#cdd6f4;
+}
+
+button{
+	width:30vw;
+	height:30vh;
+	font-size:3em;
+	background-color:#6c7086;
+	border-style:solid;
+	border-radius:5px;
+	border-color:#6c7086;
+	color:#cdd6f4
+}
+
+.result-container{
+	margin-left:20px;
+	margin-top:50px;
+}
+
+.result{
+	font-size:2em;
+	color:#cdd6f4;
+}
+
+.loss{
+	color:#cc0202;
+}
+
+.win{
+	color:#89b4fa;
+}
